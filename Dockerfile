@@ -2,6 +2,9 @@
 FROM dasbastard/dirty:latest
 
 # Docker
+# Clone repo and prepare working directory
+# Docker
+RUN git clone 'https://github.com/CrePavan/MANAGERKING.git' /root/managerking
 RUN mkdir /root/emilia/bin/
 WORKDIR /root/emilia/
 # Try Upgrade some requirements
