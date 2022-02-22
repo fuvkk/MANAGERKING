@@ -151,7 +151,7 @@ def start(update, context):
             buttons = InlineKeyboardMarkup([
                 [InlineKeyboardButton(text="⚙️ Connections", callback_data="main_connect")],
                 [InlineKeyboardButton(text="Lang", callback_data="main_setlang"), InlineKeyboardButton(text="Help", url=f"https://t.me/{BOT}?start=help")],
-                [InlineKeyboardButton(text="➕ Tambahkan Saya Ke Grup ➕", url=f"https://t.me/{BOT}?startgroup=new")]])
+                [InlineKeyboardButton(text="➕ Add me to ur Group ➕", url=f"https://t.me/{BOT}?startgroup=new")]])
             update.effective_message.reply_text(
                 tl(update.effective_message, PM_START_TEXT).format(escape_markdown(first_name), escape_markdown(context.bot.first_name), OWNER_USERNAME),
                 disable_web_page_preview=True,
