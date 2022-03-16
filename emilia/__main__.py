@@ -152,7 +152,7 @@ def start(update, context):
                 [InlineKeyboardButton(text="Commands List 📖", callback_data="help_back")],
                 [InlineKeyboardButton(text="⚙️ Connect", callback_data="main_connect"),
                  InlineKeyboardButton(text="Language 🌎", callback_data="main_setlang")], [ InlineKeyboardButton ( text = "🏠 Support" , url = f"https://t.me/TeamCodexun" ),
-                 InlineKeyboardButton ( text = "Updates 💡" , url = f"https://t.me/Codexun" )],
+                 InlineKeyboardButton ( text = "Updates 💠" , url = f"https://t.me/Codexun" )],
                 [InlineKeyboardButton(text="✚ Add me to ur Group ✚", url=f"https://t.me/{BOT}?startgroup=new")]])
             update.effective_message.reply_text(
                 tl(update.effective_message, PM_START_TEXT).format(escape_markdown(first_name), escape_markdown(context.bot.first_name), OWNER_USERNAME),
