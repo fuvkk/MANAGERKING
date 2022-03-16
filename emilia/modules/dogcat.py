@@ -133,7 +133,7 @@ __help__ = """
  - /catgif: Get gifs of cute kittens
 """
 
-__mod_name__ = "Dogs and Cats"
+__mod_name__ = "DogCat"
 
 if (DOG_API_KEY != None):
     DOG_HANDLER = DisableAbleCommandHandler("dog", dog, admin_ok=True, pass_args=False)
