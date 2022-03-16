@@ -5,9 +5,9 @@ __lang__ = "🇮🇩 Indonesia"
 id = {
 # main stuff
 	"start_text": """
-Hai {} ️ 
+*Hai {}* ️👋
 ━━━━━━━━━━━━━━━━━━━━━━━
-[Saya Group Securer](t.me/codexun) Bot, bot manajemen grup yang kuat yang membantu Anda mengelola grup super dengan mudah dan aman. 
+Saya [Group Securer Bot](t.me/codexun), bot manajemen grup yang kuat yang membantu Anda mengelola grup super dengan mudah dan aman. 
 
 Saya juga dapat melindungi grup super Anda dari scammer dan spammer, untuk menggunakan saya cukup tambahkan saya ke grup Anda dan jadikan admin! 
 ━━━━━━━━━━━━━━━━━━━━━━━ 
