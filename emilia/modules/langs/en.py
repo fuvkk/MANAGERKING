@@ -31,14 +31,11 @@ Available commands are :
 # __main__
 	"Ada yang bisa saya bantu? 😊": "Is there anything I can help? 😊",
 	"start_text": """
-Hey {} 👋
+Welcome {} 👋
 ━━━━━━━━━━━━━━━━━━━━━━━ ️ 
-I Am A Bot That Can Help You Managing Groups 
-To Be Safe and Fun 
-Use the /help command to find out my features ️ 
+I Am A Bot That Can Help You Managing Groups To Be Safe and Fun. Use the command /help to find out my features. ️ 
 ━━━━━━━━━━━━━━━━━━━━━━━
-Want to add me to your group? Just click the button below! 
-If you want to ask something, you can love [my owner](https://t.me/{})
+Add me to your group and secure your group from scammers and spammers.
 """,
 	"help_text": """
 *Main commands available :*
