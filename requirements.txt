@@ -17,7 +17,7 @@ pytz
 future
 emoji
 requests
-sqlalchemy
+sqlalchemy==1.4.31
 python-telegram-bot
 jikanpy
 psycopg2-binary
