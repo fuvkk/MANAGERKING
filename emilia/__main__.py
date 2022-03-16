@@ -149,7 +149,7 @@ def start(update, context):
         else:
             first_name = update.effective_user.first_name
             buttons = InlineKeyboardMarkup([
-                [InlineKeyboardButton(text="Connect 🔐", callback_data="help_back"),
+                [InlineKeyboardButton(text="Connect 🔐", callback_data="aboutmanu_"),
                  InlineKeyboardButton(text="Language 🌎", callback_data="main_setlang")], [InlineKeyboardButton(text="📋 Commands Menu 📋", callback_data="help_back")],
                 [InlineKeyboardButton(text="✚ Add Bot in Your Group ✚", url=f"https://t.me/{BOT}?startgroup=new")]])
             update.effective_message.reply_text(
@@ -160,6 +160,63 @@ def start(update, context):
     else:
         update.effective_message.reply_text(tl(update.effective_message, "Ada yang bisa saya bantu? 😊"))
 
+
+def aries_about_callback(update, context):
+    query = update.callback_query
+    if query.data == "aboutmanu_":
+        query.message.edit_text(
+            text=f"*👋 ʜʟᴏ ᴍʏ ɴᴀᴍᴇ ɪꜱ ᴄʀᴇᴀᴛᴏʀ ᴘᴀᴠᴀɴ.\n\nᴀ ᴘᴏᴡᴇʀꜰᴜʟ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ʙᴜɪʟᴛ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀꜱɪʟʏ ᴀɴᴅ ᴛᴏ ᴘʀᴏᴛᴇᴄᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ ꜰʀᴏᴍ ꜱᴄᴀᴍᴍᴇʀꜱ ᴀɴᴅ ꜱᴘᴀᴍᴍᴇʀꜱ.* "
+            f"\n\nɪ ʜᴀᴠᴇ ᴛʜᴇ ɴᴏʀᴍᴀʟ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢɪɴɢ ꜰᴜɴᴄᴛɪᴏɴꜱ ʟɪᴋᴇ ꜰʟᴏᴏᴅ ᴄᴏɴᴛʀᴏʟ, ᴀ ᴡᴀʀɴɪɴɢ ꜱʏꜱᴛᴇᴍ ᴇᴛᴄ ʙᴜᴛ ɪ ᴍᴀɪɴʟʏ ʜᴀᴠᴇ ᴛʜᴇ ᴀᴅᴠᴀɴᴄᴇᴅ ᴀɴᴅ ʜᴀɴᴅʏ ᴀɴᴛɪꜱᴘᴀᴍ ꜱʏꜱᴛᴇᴍ ᴀɴᴅ ᴛʜᴇ ꜱɪʙʏʟ ʙᴀɴɴɪɴɢ ꜱʏꜱᴛᴇᴍ ᴡʜɪᴄʜ ꜱᴀꜰᴇɢᴀᴜʀᴅꜱ ᴀɴᴅ ʜᴇʟᴘꜱ ʏᴏᴜʀ ɢʀᴏᴜᴘ ꜰʀᴏᴍ ꜱᴘᴀᴍᴍᴇʀꜱ."
+            f"\n\n🙋🏻 ᴡʜᴀᴛ ᴄᴀɴ ɪ ᴅᴏ :"
+            f"\n\n➲  ɪ ᴄᴀɴ ʀᴇꜱᴛʀɪᴄᴛ ᴜꜱᴇʀꜱ."
+            f"\n\n➲  ɪ ᴄᴀɴ ᴘʟᴀʏ ʜɪɢʜ ǫᴜᴀʟɪᴛʏ ᴍᴜꜱɪᴄ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ."
+            f"\n\n➲  ɪ ᴄᴀɴ ɢʀᴇᴇᴛ ᴜꜱᴇʀꜱ ᴡɪᴛʜ ᴄᴜꜱᴛᴏᴍɪᴢᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇꜱ ᴀɴᴅ ᴇᴠᴇɴ ꜱᴇᴛ ᴀ ɢʀᴏᴜᴘ'ꜱ ʀᴜʟᴇꜱ."
+            f"\n\n➲  ɪ ᴄᴀɴ ᴡᴀʀɴ ᴜꜱᴇʀꜱ ᴜɴᴛɪʟ ᴛʜᴇʏ ʀᴇᴀᴄʜ ᴍᴀx ᴡᴀʀɴꜱ, ᴡɪᴛʜ ᴇᴀᴄʜ ᴘʀᴇᴅᴇꜰɪɴᴇᴅ ᴀᴄᴛɪᴏɴꜱ ꜱᴜᴄʜ ᴀꜱ ʙᴀɴ, ᴍᴜᴛᴇ, ᴋɪᴄᴋ, ᴇᴛᴄ."
+            f"\n\n➲  ɪ ʜᴀᴠᴇ ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ᴀɴᴛɪ-ꜰʟᴏᴏᴅ ꜱʏꜱᴛᴇᴍ."
+            f"\n\n➲  ɪ ʜᴀᴠᴇ ᴀ ɴᴏᴛᴇ ᴋᴇᴇᴘɪɴɢ ꜱʏꜱᴛᴇᴍ, ʙʟᴀᴄᴋʟɪꜱᴛꜱ, ᴀɴᴅ ᴇᴠᴇɴ ᴘʀᴇᴅᴇᴛᴇʀᴍɪɴᴇᴅ ʀᴇᴘʟɪᴇꜱ ᴏɴ ᴄᴇʀᴛᴀɪɴ ᴋᴇʏᴡᴏʀᴅꜱ."
+            f"\n\n➲  ɪ ᴄʜᴇᴄᴋ ꜰᴏʀ ᴀᴅᴍɪɴꜱ ᴘᴇʀᴍɪꜱꜱɪᴏɴꜱ ʙᴇꜰᴏʀᴇ ᴇxᴇᴄᴜᴛɪɴɢ ᴀɴʏ ᴄᴏᴍᴍᴀɴᴅ ᴀɴᴅ ᴍᴏʀᴇ ꜱᴛᴜꜰꜰꜱ."
+            f"\n\n\n *ɪꜰ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ǫᴜᴇꜱᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴄʀᴇᴀᴛᴏʀ ᴘᴀᴠᴀɴ ʙᴏᴛ ᴛʜᴇɴ ᴄᴏɴᴛᴀᴄᴛ ᴜꜱ ᴀᴛ ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ ᴀɴᴅ ᴛᴏ ᴋᴇᴇᴘ ʏᴏᴜʀꜱᴇʟꜰ ᴜᴘᴅᴀᴛᴇᴅ ᴀʙᴏᴜᴛ ᴄʀᴇᴀᴛᴏʀ ᴘᴀᴠᴀɴ ᴊᴏɪɴ* [ᴛʜᴇ ᴄʀᴇᴀᴛᴏʀ ᴘᴀᴠᴀɴ](https://t.me/TheCreatorPavan).",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="ᴀᴅᴍɪɴs ꜱᴛɪɴɢ", callback_data="aboutmanu_permis"
+                        ),
+                        InlineKeyboardButton(
+                            text="ᴀɴᴛɪ ꜱᴘᴀᴍ", callback_data="aboutmanu_spamprot"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="ᴄʀᴇᴅɪᴛꜱ", callback_data="aboutmanu_credit"
+                        ),
+                        InlineKeyboardButton(
+                            text="ᴛ.ᴀ.ᴄ", callback_data="aboutmanu_tac"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="ʜᴏᴡ ᴛᴏ ᴜꜱᴇ", callback_data="aboutmanu_howto"
+                        )
+                    ],
+                    [InlineKeyboardButton(text="🔙 ʜᴏᴍᴇ ʙᴀᴄᴋ", callback_data="aboutmanu_back")],
+                ]
+            ),
+        )
+    elif query.data == "aboutmanu_back":
+        query.message.edit_text(
+            PM_START_TEXT.format(
+                escape_markdown(context.bot.first_name),
+                escape_markdown(get_readable_time((time.time() - StartTime))),
+                sql.num_users(),
+                sql.num_chats(),
+            ),
+            reply_markup=InlineKeyboardMarkup(buttons),
+            parse_mode=ParseMode.MARKDOWN,
+            timeout=60,
+        )
 
 def m_connect_button(update, context):
     context.bot.delete_message(update.effective_chat.id, update.effective_message.message_id)
