@@ -33,7 +33,7 @@ Available commands are :
 	"start_text": """
 Hey {} 👋
 ━━━━━━━━━━━━━━━━━━━━━━━ ️ 
-[I'm *Group Securer](t.me/codexun) Bot*, the powerful group management bot which helps you to manage your super groups easily and safely.
+*[I'm Group Securer](t.me/codexun) Bot*, the powerful group management bot which helps you to manage your super groups easily and safely.
 
 I also can protect your super group from scammers and spammers, for using me just add me tou your group and make a admin!
 ━━━━━━━━━━━━━━━━━━━━━━━
@@ -42,15 +42,15 @@ I also can protect your super group from scammers and spammers, for using me jus
 	"help_text": """
 *Available Commands List 📖*
 
-• /start : Start the bot
-• /help : Open help menu
-• /setlang : Set language
-• /connect : Connect Chat
-• /settings : Group stgns
+• /start : Start the Group Securer
+• /help : Open Commands Section
+• /setlang : Set Your Language
+• /connect : Connect to Chat Group
+• /settings : Open Group Settings
 
-For any type of queries about to bot kindly konws us at *@TeamCodexun*, the official support chat group.
+For any type of queries about to bot or your issues and questions kindly konws us at *@TeamCodexun* the official support chat group.
 
-*Use the given buttons for more*
+*Use the buttons given below for more*
 """,
 	"donate_text": """Hello, glad to hear you want to donate!
 Need a lot of work for my owner to take me to my place now, and \
