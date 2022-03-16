@@ -95,7 +95,7 @@ __help__ = """
  - /tte <any text> : Converts text to speech in English Language.
 """
 
-__mod_name__ = "Text to Speech"
+__mod_name__ = "TTS"
 
 dispatcher.add_handler(DisableAbleCommandHandler("tts", tts, pass_args=True))
 dispatcher.add_handler(DisableAbleCommandHandler("ttj", ttj, pass_args=True))
