@@ -31,11 +31,13 @@ Available commands are :
 # __main__
 	"Ada yang bisa saya bantu? 😊": "Is there anything I can help? 😊",
 	"start_text": """
-Welcome {} 👋
+Hey {} 👋
 ━━━━━━━━━━━━━━━━━━━━━━━ ️ 
-I Am A Bot That Can Help You Managing Groups To Be Safe and Fun. Use the command /help to find out my features. ️ 
+I'm Group Securer Bot, the powerful group management bot which helps you to manage your groups easily and safely.
+
+I can protect your super group from scammers and spammers, just add me and make a admin!
 ━━━━━━━━━━━━━━━━━━━━━━━
-Add me to your group and secure your group from scammers and spammers.
+Get more information about below.
 """,
 	"help_text": """
 *Main commands available :*
