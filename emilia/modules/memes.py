@@ -384,7 +384,7 @@ def shout(update, context):
 
 __help__ = "memes_help"
 
-__mod_name__ = "Memes and etc."
+__mod_name__ = "Memes"
 
 COPYPASTA_HANDLER = DisableAbleCommandHandler("cp", copypasta, pass_args=True)
 CLAPMOJI_HANDLER = DisableAbleCommandHandler("clap", clapmoji, pass_args=True)
