@@ -31,9 +31,9 @@ Available commands are :
 # __main__
 	"Ada yang bisa saya bantu? 😊": "Is there anything I can help? 😊",
 	"start_text": """
-Hey {} 👋
+*Hey {}* 👋
 ━━━━━━━━━━━━━━━━━━━━━━━ ️ 
-[I'm Group Securer](t.me/codexun) Bot, the powerful group management bot which helps you to manage your super groups easily and safely.
+I'm [Group Securer Bot](t.me/codexun), the powerful group management bot which helps you to manage your super groups easily and safely.
 
 I also can protect your super group from scammers and spammers, for using me just add me tou your group and make a admin!
 ━━━━━━━━━━━━━━━━━━━━━━━
