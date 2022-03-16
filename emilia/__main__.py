@@ -149,9 +149,10 @@ def start(update, context):
         else:
             first_name = update.effective_user.first_name
             buttons = InlineKeyboardMarkup([
-                [InlineKeyboardButton(text="Connect 🔐", callback_data="aboutmanu_"),
-                 InlineKeyboardButton(text="Language 🌎", callback_data="main_setlang")], [InlineKeyboardButton(text="Commands 📋", callback_data="help_back"),
-                 InlineKeyboardButton(text="About 👨🏻‍💻", callback_data="aboutmanu_cbguide")],
+                [InlineKeyboardButton(text="Commands List 📖", callback_data="help_back")],
+                [InlineKeyboardButton(text="⚙️ Connect", callback_data="main_connect"),
+                 InlineKeyboardButton(text="Language 🌎", callback_data="main_setlang")], [InlineKeyboardButton(text="Support 🙋🏻‍♂️", url=f"https://t.me/TeamCodexun"),
+                 InlineKeyboardButton(text="Updates 👨🏻‍💻", url=f"https://t.me/Codexun")],
                 [InlineKeyboardButton(text="✚ Add Bot in Your Group ✚", url=f"https://t.me/{BOT}?startgroup=new")]])
             update.effective_message.reply_text(
                 tl(update.effective_message, PM_START_TEXT).format(escape_markdown(first_name), escape_markdown(context.bot.first_name), OWNER_USERNAME),
@@ -247,7 +248,7 @@ def help_button(update, context):
             query.message.edit_text(text=text,
                                   parse_mode=ParseMode.MARKDOWN,
                                   reply_markup=InlineKeyboardMarkup(
-                                        [[InlineKeyboardButton(text=tl(query.message, "⬅️ kembali"), callback_data="help_back")]]))
+                                        [[InlineKeyboardButton(text=tl(query.message, "⬅️ Back"), callback_data="help_back")]]))
 
         elif prev_match:
             curr_page = int(prev_match.group(1))
@@ -280,229 +281,6 @@ def help_button(update, context):
         else:
             query.message.edit_text(excp.message)
             LOGGER.exception("Exception in help buttons. %s", str(query.data))
-
-
-def aries_about_callback(update, context):
-    query = update.callback_query
-    if query.data == "aboutmanu_":
-        query.message.edit_text(
-            text=f"*👋 ʜʟᴏ ᴍʏ ɴᴀᴍᴇ ɪꜱ ᴄʀᴇᴀᴛᴏʀ ᴘᴀᴠᴀɴ.\n\nᴀ ᴘᴏᴡᴇʀꜰᴜʟ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ʙᴜɪʟᴛ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀꜱɪʟʏ ᴀɴᴅ ᴛᴏ ᴘʀᴏᴛᴇᴄᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ ꜰʀᴏᴍ ꜱᴄᴀᴍᴍᴇʀꜱ ᴀɴᴅ ꜱᴘᴀᴍᴍᴇʀꜱ.* "
-            f"\n\nɪ ʜᴀᴠᴇ ᴛʜᴇ ɴᴏʀᴍᴀʟ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢɪɴɢ ꜰᴜɴᴄᴛɪᴏɴꜱ ʟɪᴋᴇ ꜰʟᴏᴏᴅ ᴄᴏɴᴛʀᴏʟ, ᴀ ᴡᴀʀɴɪɴɢ ꜱʏꜱᴛᴇᴍ ᴇᴛᴄ ʙᴜᴛ ɪ ᴍᴀɪɴʟʏ ʜᴀᴠᴇ ᴛʜᴇ ᴀᴅᴠᴀɴᴄᴇᴅ ᴀɴᴅ ʜᴀɴᴅʏ ᴀɴᴛɪꜱᴘᴀᴍ ꜱʏꜱᴛᴇᴍ ᴀɴᴅ ᴛʜᴇ ꜱɪʙʏʟ ʙᴀɴɴɪɴɢ ꜱʏꜱᴛᴇᴍ ᴡʜɪᴄʜ ꜱᴀꜰᴇɢᴀᴜʀᴅꜱ ᴀɴᴅ ʜᴇʟᴘꜱ ʏᴏᴜʀ ɢʀᴏᴜᴘ ꜰʀᴏᴍ ꜱᴘᴀᴍᴍᴇʀꜱ."
-            f"\n\n🙋🏻 ᴡʜᴀᴛ ᴄᴀɴ ɪ ᴅᴏ :"
-            f"\n\n➲  ɪ ᴄᴀɴ ʀᴇꜱᴛʀɪᴄᴛ ᴜꜱᴇʀꜱ."
-            f"\n\n➲  ɪ ᴄᴀɴ ᴘʟᴀʏ ʜɪɢʜ ǫᴜᴀʟɪᴛʏ ᴍᴜꜱɪᴄ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ."
-            f"\n\n➲  ɪ ᴄᴀɴ ɢʀᴇᴇᴛ ᴜꜱᴇʀꜱ ᴡɪᴛʜ ᴄᴜꜱᴛᴏᴍɪᴢᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇꜱ ᴀɴᴅ ᴇᴠᴇɴ ꜱᴇᴛ ᴀ ɢʀᴏᴜᴘ'ꜱ ʀᴜʟᴇꜱ."
-            f"\n\n➲  ɪ ᴄᴀɴ ᴡᴀʀɴ ᴜꜱᴇʀꜱ ᴜɴᴛɪʟ ᴛʜᴇʏ ʀᴇᴀᴄʜ ᴍᴀx ᴡᴀʀɴꜱ, ᴡɪᴛʜ ᴇᴀᴄʜ ᴘʀᴇᴅᴇꜰɪɴᴇᴅ ᴀᴄᴛɪᴏɴꜱ ꜱᴜᴄʜ ᴀꜱ ʙᴀɴ, ᴍᴜᴛᴇ, ᴋɪᴄᴋ, ᴇᴛᴄ."
-            f"\n\n➲  ɪ ʜᴀᴠᴇ ᴀɴ ᴀᴅᴠᴀɴᴄᴇᴅ ᴀɴᴛɪ-ꜰʟᴏᴏᴅ ꜱʏꜱᴛᴇᴍ."
-            f"\n\n➲  ɪ ʜᴀᴠᴇ ᴀ ɴᴏᴛᴇ ᴋᴇᴇᴘɪɴɢ ꜱʏꜱᴛᴇᴍ, ʙʟᴀᴄᴋʟɪꜱᴛꜱ, ᴀɴᴅ ᴇᴠᴇɴ ᴘʀᴇᴅᴇᴛᴇʀᴍɪɴᴇᴅ ʀᴇᴘʟɪᴇꜱ ᴏɴ ᴄᴇʀᴛᴀɪɴ ᴋᴇʏᴡᴏʀᴅꜱ."
-            f"\n\n➲  ɪ ᴄʜᴇᴄᴋ ꜰᴏʀ ᴀᴅᴍɪɴꜱ ᴘᴇʀᴍɪꜱꜱɪᴏɴꜱ ʙᴇꜰᴏʀᴇ ᴇxᴇᴄᴜᴛɪɴɢ ᴀɴʏ ᴄᴏᴍᴍᴀɴᴅ ᴀɴᴅ ᴍᴏʀᴇ ꜱᴛᴜꜰꜰꜱ."
-            f"\n\n\n *ɪꜰ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ǫᴜᴇꜱᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴄʀᴇᴀᴛᴏʀ ᴘᴀᴠᴀɴ ʙᴏᴛ ᴛʜᴇɴ ᴄᴏɴᴛᴀᴄᴛ ᴜꜱ ᴀᴛ ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ ᴀɴᴅ ᴛᴏ ᴋᴇᴇᴘ ʏᴏᴜʀꜱᴇʟꜰ ᴜᴘᴅᴀᴛᴇᴅ ᴀʙᴏᴜᴛ ᴄʀᴇᴀᴛᴏʀ ᴘᴀᴠᴀɴ ᴊᴏɪɴ* [ᴛʜᴇ ᴄʀᴇᴀᴛᴏʀ ᴘᴀᴠᴀɴ](https://t.me/TheCreatorPavan).",
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            text="ᴀᴅᴍɪɴs ꜱᴛɪɴɢ", callback_data="aboutmanu_permis"
-                        ),
-                        InlineKeyboardButton(
-                            text="ᴀɴᴛɪ ꜱᴘᴀᴍ", callback_data="aboutmanu_spamprot"
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="ᴄʀᴇᴅɪᴛꜱ", callback_data="aboutmanu_credit"
-                        ),
-                        InlineKeyboardButton(
-                            text="ᴛ.ᴀ.ᴄ", callback_data="aboutmanu_tac"
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="ʜᴏᴡ ᴛᴏ ᴜꜱᴇ", callback_data="aboutmanu_howto"
-                        )
-                    ],
-                    [InlineKeyboardButton(text="🔙 ʜᴏᴍᴇ ʙᴀᴄᴋ", callback_data="aboutmanu_back")],
-                ]
-            ),
-        )
-    elif query.data == "aboutmanu_back":
-        query.message.edit_text(
-            PM_START_TEXT.format(
-                escape_markdown(context.bot.first_name),
-                escape_markdown(get_readable_time((time.time() - StartTime))),
-                sql.num_users(),
-                sql.num_chats(),
-            ),
-            reply_markup=InlineKeyboardMarkup(buttons),
-            parse_mode=ParseMode.MARKDOWN,
-            timeout=60,
-        )
-
-    elif query.data == "aboutmanu_howto":
-        query.message.edit_text(
-            text=f"* ｢ BASIC HELP 」*"
-            f"\n\n*ʜᴇʀᴇ ɪꜱ ᴀ ꜱᴏᴍᴇ ʙᴀꜱɪᴄ ʜᴇʟᴘ ᴄᴏᴍᴍᴀɴᴅꜱ ᴏꜰ ᴄʀᴇᴀᴛᴏʀ ᴘᴀᴠᴀɴ ʀᴏʙᴏᴛ. ᴜꜱᴇ ᴛʜᴇ ꜰᴏʟʟᴏᴡɪɴɢ ʙᴜᴛᴛᴏɴꜱ ꜰᴏʀ ᴋɴᴏᴡɪɴɢ ᴍᴏʀᴇ ɪɴꜰᴏ ᴀɴᴅ ꜰᴏʀ ᴍᴏʀᴇ ꜱᴇᴇ ᴍᴀɪɴ ᴄᴏᴍᴍᴀɴᴅ ꜱᴇᴄᴛɪᴏɴ.* \n"
-            f"\n\n*© @TheCreatorPavan*\n"
-            f"",
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            text="ᴀᴅᴍɪɴs ꜱᴛɪɴɢ", callback_data="aboutmanu_permis"
-                        ),
-                        InlineKeyboardButton(
-                            text="ᴀɴᴛɪ ꜱᴘᴀᴍ", callback_data="aboutmanu_spamprot"
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="ᴍᴜꜱɪᴄ ꜱᴇᴛᴜᴘ", callback_data="aboutmanu_cbguide"
-                        ),
-                    ],
-                    [InlineKeyboardButton(text="🔙 ʜᴏᴍᴇ ʙᴀᴄᴋ", callback_data="aboutmanu_")],
-                ]
-            ),
-        )
-    elif query.data == "aboutmanu_credit":
-        query.message.edit_text(
-            text=f"*｢ About Credit 」*\n\n*◈  ᴄʀᴇᴀᴛᴏʀ ᴘᴀᴠᴀɴ ɪꜱ ᴛʜᴇ ʀᴇᴅɪꜱɪɢɴᴇᴅ ᴠᴇʀꜱɪᴏɴ ᴏꜰ ᴅᴀɪꜱʏ ᴀɴᴅ ꜱᴀɪᴛᴀᴍᴀ ᴀɴᴅ ᴏᴛʜʀᴇʀ ꜰᴏʀ ᴛʜᴇ ʙᴇꜱᴛ ᴘᴇʀꜰᴏʀᴍᴀɴᴄᴇ.*"
-            f"\n\n*◈  ꜰʀᴏᴍ ᴏᴜʀ ᴀʙɪʟɪᴛʏ ᴡᴇ ᴛʀʏ ᴛᴏ ᴍᴀᴋᴇ ɪᴛ ᴇᴀꜱɪᴇʀ ᴀɴᴅ ꜰᴀꜱᴛᴇʀ.*"
-            f"\n\n*◈  ꜱᴘᴇᴄɪᴀʟ ᴛʜᴀɴᴋꜱ ᴛᴏ -----.*"
-            f"\n\n*◈  ᴄʀᴇᴅɪᴛ ᴏꜰ ʀᴇᴅᴇꜱɪɢɴɪɴɢ ᴛᴏ ᴘᴀᴠᴀɴ ᴀɴᴅ ᴀᴀʏᴜꜱʜ.*"
-            f"\n\n*◈  ꜱᴏᴍᴇ ᴍᴏᴅᴜʟᴇꜱ ɪɴ ᴛʜɪꜱ ʙᴏᴛ ɪꜱ ᴏᴡɴᴇᴅ ʙʏ ᴅɪꜰꜰᴇʀᴇɴᴛ ᴀᴜᴛʜᴏʀꜱ, ꜱᴏ, ᴀʟʟ ᴄʀᴇᴅɪᴛꜱ ɢᴏᴇꜱ ᴛᴏ ᴛʜᴇᴍ ᴀʟꜱᴏ ꜰᴏʀ ᴘᴀᴜʟ ʟᴀʀꜱᴏɴ ꜰᴏʀ ᴍᴀʀɪᴇ.*"
-            f"\n\n*◈  ɪꜰ ᴀɴʏ ǫᴜᴇsᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴄʀᴇᴀᴛᴏʀ ᴘᴀᴠᴀɴ ʙᴏᴛ, ʟᴇᴛ ᴜꜱ ᴋɴᴏᴡ ᴀᴛ ᴏᴜʀ ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ ɢʀᴏᴜᴘ.*",
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                   [
-                      InlineKeyboardButton(text="Pᴀᴠᴀɴ", url="http://t.me/PavanxD"),
-                      InlineKeyboardButton(text="Aʏᴜꜱʜ", url="http://t.me/op_aayush"),
-                   ],[
-                      InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ", url="http://t.me/CreatorPavanSupport"),
-                   ],
-        [InlineKeyboardButton(text="🔙 ʜᴏᴍᴇ ʙᴀᴄᴋ", callback_data="aboutmanu_")]]
-            ),
-        )
-
-    elif query.data == "aboutmanu_permis":
-        query.message.edit_text(
-            text=f"<b> ｢ Admin Permissions 」</b>"
-            f"\n\nᴛᴏ ᴀᴠᴏɪᴅ ꜱʟᴏᴡɪɴɢ ᴅᴏᴡɴ, ᴄʀᴇᴀᴛᴏʀ ᴘᴀᴠᴀɴ ʀᴏʙᴏᴛꜱ ᴄᴀᴄʜᴇꜱ ᴀᴅᴍɪɴ ʀɪɢʜᴛꜱ ꜰᴏʀ ᴇᴀᴄʜ ᴜꜱᴇʀ. ᴛʜɪꜱ ᴄᴀᴄʜᴇ ʟᴀꜱᴛꜱ ᴀʙᴏᴜᴛ 10 ᴍɪɴᴜᴛᴇꜱ ;  ᴛʜɪꜱ ᴍᴀʏ ᴄʜᴀɴɢᴇ ɪɴ ᴛʜᴇ ꜰᴜᴛᴜʀᴇ. ᴛʜɪꜱ ᴍᴇᴀɴꜱ ᴛʜᴀᴛ ɪꜰ ʏᴏᴜ ᴘʀᴏᴍᴏᴛᴇ ᴀ ᴜꜱᴇʀ ᴍᴀɴᴜᴀʟʟʏ (ᴡɪᴛʜᴏᴜᴛ ᴜꜱɪɴɢ ᴛʜᴇ /ᴘʀᴏᴍᴏᴛᴇ ᴄᴏᴍᴍᴀɴᴅ), ᴄʀᴇᴀᴛᴏʀ ᴘᴀᴠᴀɴ ʀᴏʙᴏᴛ ᴡɪʟʟ ᴏɴʟʏ ꜰɪɴᴅ ᴏᴜᴛ ~10 ᴍɪɴᴜᴛᴇꜱ ʟᴀᴛᴇʀ.\n\nɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜᴘᴅᴀᴛᴇ ᴛʜᴇᴍ ɪᴍᴍᴇᴅɪᴀᴛᴇʟʏ, ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ ᴛʜᴇ /ᴀᴅᴍɪɴᴄᴀᴄʜᴇ ᴄᴏᴍᴍᴀɴᴅ, ᴛʜᴛᴀ'ʟʟ ꜰᴏʀᴄᴇ ᴄʀᴇᴀᴛᴏʀ ᴘᴀᴠᴀɴ ʀᴏʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ ᴡʜᴏ ᴛʜᴇ ᴀᴅᴍɪɴꜱ ᴀʀᴇ ᴀɢᴀɪɴ ᴀɴᴅ ᴛʜᴇɪʀ ᴘᴇʀᴍɪꜱꜱɪᴏɴꜱ\n\nɪꜰ ʏᴏᴜ ᴀʀᴇ ɢᴇᴛᴛɪɴɢ ᴀ ᴍᴇꜱꜱᴀɢᴇ ꜱᴀʏɪɴɢ :  `ʏᴏᴜ ᴍᴜꜱᴛ ʙᴇ ᴛʜɪꜱ ᴄʜᴀᴛ ᴀᴅᴍɪɴɪꜱᴛʀᴀᴛᴏʀ ᴛᴏ ᴘᴇʀꜰᴏʀᴍ ᴛʜɪꜱ ᴀᴄᴛɪᴏɴ !`\n\nᴛʜɪꜱ ʜᴀꜱ ɴᴏᴛʜɪɴɢ ᴛᴏ ᴅᴏ ᴡɪᴛʜ ᴄʀᴇᴀᴛᴏʀ ᴘᴀᴠᴀɴ ʀᴏʙᴏᴛ'ꜱ ʀɪɢʜᴛꜱ ; ᴛʜɪꜱ ɪꜱ ᴀʟʟ ᴀʙᴏᴜᴛ ʏᴏᴜʀ ᴘᴇʀᴍɪꜱꜱɪᴏɴꜱ ᴀꜱ ᴀɴ ᴀᴅᴍɪɴ. ᴄʀᴇᴀᴛᴏʀ ᴘᴀᴠᴀɴ ʀᴏʙᴏᴛ ʀᴇꜱᴘᴇᴄᴛꜱ ᴀᴅᴍɪɴ ᴘᴇʀᴍɪꜱꜱɪᴏɴꜱ ; ɪꜰ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴛʜᴇ ʙᴀɴ ᴜꜱᴇʀꜱ ᴘᴇʀᴍɪꜱꜱɪᴏɴ ᴀꜱ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴀᴅᴍɪɴ, ʏᴏᴜ ᴡᴏɴ'ᴛ ʙᴇ ᴀʙʟᴇ ᴛᴏ ʙᴀɴ ᴜꜱᴇʀꜱ ᴡɪᴛʜ ᴄʀᴇᴀᴛᴏʀ ᴘᴀᴠᴀɴ ʀᴏʙᴏᴛ. ꜱɪᴍɪʟᴀʀʟʏ, ᴛᴏ ᴄʜᴀɴɢᴇ ᴄʀᴇᴀᴛᴏʀ ᴘᴀᴠᴀɴ ʀᴏʙᴏᴛ ꜱᴇᴛᴛɪɴɢꜱ, ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ ʜᴀᴠᴇ ᴛʜᴇ ᴄʜᴀɴɢᴇ ɢʀᴏᴜᴘ ɪɴꜰᴏ ᴘᴇʀᴍɪꜱꜱɪᴏɴ.\n\n*ᴛʜᴇ ᴍᴇꜱꜱᴀɢᴇ ᴠᴇʀʏ ᴄʟᴇᴀʀʟʏ ꜱᴀʏꜱ ᴛʜᴀᴛ ʏᴏᴜ ɴᴇᴇᴅ ᴛʜᴇꜱᴇ ʀɪɢʜᴛꜱ - ɴᴏᴛ ᴄʀᴇᴀᴛᴏʀ ᴘᴀᴠᴀɴ ʀᴏʙᴏᴛ*",
-            parse_mode=ParseMode.HTML,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 ʜᴏᴍᴇ ʙᴀᴄᴋ", callback_data="aboutmanu_")]]
-            ),
-        )
-    
-    
-    elif query.data == "aboutmanu_spamprot":
-        query.message.edit_text(
-            text="* ｢ Anti-Spam Settings 」*"
-            "\n- /antispam <on/off/yes/no>: Change antispam security settings in the group, or return your current settings(when no arguments)."
-            "\n_This helps protect you and your groups by removing spam flooders as quickly as possible._"
-            "\n\n- /setflood <int/'no'/'off'>: enables or disables flood control"
-            "\n- /setfloodmode <ban/kick/mute/tban/tmute> <value>: Action to perform when user have exceeded flood limit. ban/kick/mute/tmute/tban"
-            "\n_Antiflood allows you to take action on users that send more than x messages in a row. Exceeding the set flood will result in restricting that user._"
-            "\n\n- /addblacklist <triggers>: Add a trigger to the blacklist. Each line is considered one trigger, so using different lines will allow you to add multiple triggers."
-            "\n- /blacklistmode <off/del/warn/ban/kick/mute/tban/tmute>: Action to perform when someone sends blacklisted words."
-            "\n_Blacklists are used to stop certain triggers from being said in a group. Any time the trigger is mentioned, the message will immediately be deleted. A good combo is sometimes to pair this up with warn filters!_"
-            "\n\n- /reports <on/off>: Change report setting, or view current status."
-            "\n • If done in pm, toggles your status."
-            "\n • If in chat, toggles that chat's status."
-            "\n_If someone in your group thinks someone needs reporting, they now have an easy way to call all admins._"
-            "\n\n- /lock <type>: Lock items of a certain type (not available in private)"
-            "\n- /locktypes: Lists all possible locktypes"
-            "\n_The locks module allows you to lock away some common items in the telegram world; the bot will automatically delete them!_"
-            '\n\n- /addwarn <keyword> <reply message>: Sets a warning filter on a certain keyword. If you want your keyword to be a sentence, encompass it with quotes, as such: /addwarn "very angry" This is an angry user. '
-            "\n- /warn <userhandle>: Warns a user. After 3 warns, the user will be banned from the group. Can also be used as a reply."
-            "\n- /strongwarn <on/yes/off/no>: If set to on, exceeding the warn limit will result in a ban. Else, will just kick."
-            "\n_If you're looking for a way to automatically warn users when they say certain things, use the /addwarn command._"
-            "\n\n- /welcomemute <off/soft/strong>: All users that join, get muted"
-            "\n_ A button gets added to the welcome message for them to unmute themselves. This proves they aren't a bot! soft - restricts users ability to post media for 24 hours. strong - mutes on join until they prove they're not bots._",
-            parse_mode=ParseMode.MARKDOWN,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_")]]
-            ),
-        )
-    elif query.data == "aboutmanu_tac":
-        query.message.edit_text(
-            text=f"<b> ｢ Terms and Conditions 」</b>\n"
-            f"\n<i>To Use This Bot, You Need To Read Terms and Conditions Carefully.</i>\n"
-            f"\n✪ We always respect your privacy. We never log into bot's api and spying on you. We use a encripted database. Bot will automatically stops if someone logged in with api."
-            f"\n✪ This hardwork is done by @CreatorPavanNetwork spending many sleepless nights.. So, Respect it."
-            f"\n✪ Some modules in this bot is owned by different authors, So, All credits goes to them Also for <b>Paul Larson for Marie</b>."
-            f"\n✪ If you need to ask anything about this bot, Go @CreatorPavanSupport."
-            f"\n✪ If you asking nonsense in Support Chat, you will get warned/banned."
-            f"\n✪ All api's we used owned by originnal authors. Some api's we use Free version. Please don't overuse AI Chat."
-            f"\n\nFor any kind of help, related to this bot, Join @CreatorPavanSupport."
-            f"\n\n<i>Terms & Conditions will be changed anytime</i>\n",
-            parse_mode=ParseMode.HTML,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        
-                        InlineKeyboardButton(text="🔙 ʜᴏᴍᴇ ʙᴀᴄᴋ", callback_data="aboutmanu_"),
-                    ]
-                ]
-            ),
-        )
-    elif query.data == "aboutmanu_cbguide":
-        query.message.edit_text(
-            text=f"* ｢ How To Setup Music 」*\n"
-            f"\n\n*◈  ꜰɪʀꜱᴛ ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴜʀ ɢʀᴏᴜᴘ.*"
-            f"\n\n*◈  ᴛʜᴇɴ ᴘʀᴏᴍᴏᴛᴇ ᴍᴇ ᴀꜱ ᴀᴅᴍɪɴ ᴀɴᴅ ɢɪᴠᴇ ᴀʟʟ ᴘᴇʀᴍɪꜱꜱɪᴏɴꜱ ᴇxᴄᴇᴘᴛ ᴀɴᴏɴʏᴍᴏᴜꜱ ᴀᴅᴍɪɴ.*"
-            f"\n\n*◈  ᴀꜰᴛᴇʀ ᴘʀᴏᴍᴏᴛᴇ ᴍᴇ ꜱᴛᴀʀᴛ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴏꜰ ᴜʀ ɢʀᴏᴜᴘ ʙᴇꜰᴏʀᴇ ᴛʜᴀᴛ ꜱᴇɴᴅ* `/reload` *ᴄᴏᴍᴍᴀɴᴅ ɪɴ ᴜʀ ᴄʜᴀᴛ ɢʀᴏᴜᴘ.*"
-            f"\n\n*◈  ᴛʜᴇɴ ꜱᴇɴᴅ ᴘʟᴀʏ ᴄᴏᴍᴍᴀɴᴅ ᴀɴᴅ ᴜʀ ꜱᴏɴɢ ɴᴀᴍᴇ.*"
-            f"\n\n*◈  ᴍᴀᴋᴇ ꜱᴜʀᴇ ᴜ ꜱᴛᴀʀᴛᴇᴅ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ʙᴇꜰᴏʀᴇ ᴛʜᴀᴛ*"
-            f"\n\n*◈  ɪꜰ ᴀɴʏ ᴛʏᴘᴇ ᴏꜰ ᴇʀʀᴏʀ ᴡɪʟʟ ʙᴇ ᴄᴏᴍᴇꜱ ᴛʜᴇɴ ᴜ ᴄᴀɴ ᴄᴏɴᴛᴀᴄᴛ ᴜꜱ ᴀᴛ ᴏᴜʀ ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ ɢʀᴏᴜᴘ.*\n"
-            f"\n\n*© @TheCreatorPavan*\n",
-            parse_mode=ParseMode.MARKDOWN,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        
-                        InlineKeyboardButton(
-                            text="ᴍᴜꜱɪᴄ ᴄᴏᴍᴍᴀɴᴅꜱ ʟɪꜱᴛ", callback_data="aboutmanu_cbhelps"
-                        ),
-                    ],
-                    [ 
-                      InlineKeyboardButton(text="🔙 ʜᴏᴍᴇ ʙᴀᴄᴋ", callback_data="aboutmanu_back"),
-                    ],
-                ]
-            ),
-        )
-    elif query.data == "aboutmanu_cbhelps":
-        query.message.edit_text(
-            text=f"* ｢ Music Command 」*\n"
-            f"\n\n1️⃣ »*/play  :  ꜰᴏʀ ᴘʟᴀʏɪɴɢ ᴜʀ ꜱᴏɴɢ.*"
-            f"\n\n2️⃣ »*/pause  :  ꜰᴏʀ ᴘᴀᴜꜱᴇᴅ ꜱᴛʀᴇᴀᴍɪɴɢ.*"
-            f"\n\n3️⃣ »*/resume  :  ꜰᴏʀ ʀᴇꜱᴜᴍᴇ ꜱᴛʀᴇᴀᴍɪɴɢ.*"
-            f"\n\n4️⃣ »*/end  :  ꜰᴏʀ ᴇɴᴅ ꜱᴛʀᴇᴀᴍɪɴɢ.*"
-            f"\n\n5️⃣ »*/song  :  ꜰᴏʀ ᴅᴏᴡɴʟᴏᴀᴅ ꜱᴏɴɢ.*"
-            f"\n\n6️⃣ »*/video  :  ꜰᴏʀ ᴅᴏᴡɴʟᴏᴀᴅ ᴠɪᴅᴇᴏ.*"
-            f"\n\n7️⃣ »*/search  :  ꜱᴇᴀʀᴄʜɪɴɢ ꜰʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ.*"
-            f"\n\n8️⃣ »*/userbotjoin  :  ꜰᴏʀ ᴊᴏɪɴɪɴɢ ᴀꜱꜱɪꜱᴛᴀɴᴛ.*"
-            f"\n\n9️⃣ »*/userbotleave  :  ꜰᴏʀ ʟᴇᴀᴠᴇꜱ ᴀꜱꜱɪꜱᴛᴀɴᴛ.*"
-            f"\n\n\n*© @TheCreatorPavan*",
-            parse_mode=ParseMode.MARKDOWN,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            text="ʜᴏᴡ ᴛᴏ ᴜꜱᴇ", callback_data="aboutmanu_cbguide"
-                        ),
-                        
-                    ],
-                   [
-                       InlineKeyboardButton(text="🔙 ʜᴏᴍᴇ ʙᴀᴄᴋ", callback_data="aboutmanu_back"),
-                   ],
-                ]
-            ),
-        )
 
 
 
