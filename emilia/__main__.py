@@ -149,7 +149,7 @@ def start(update, context):
         else:
             first_name = update.effective_user.first_name
             buttons = InlineKeyboardMarkup([
-                [InlineKeyboardButton(text="⚙️ Connections", callback_data="main_connect")],
+                [InlineKeyboardButton(text="⚙️ Connections", callback_data="help_back")],
                 [InlineKeyboardButton(text="Lang", callback_data="main_setlang"), InlineKeyboardButton(text="Help", url=f"https://t.me/{BOT}?start=help")],
                 [InlineKeyboardButton(text="➕ Add me to ur Group ➕", url=f"https://t.me/{BOT}?startgroup=new")]])
             update.effective_message.reply_text(
