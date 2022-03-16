@@ -5,31 +5,26 @@ __lang__ = "🇮🇩 Indonesia"
 id = {
 # main stuff
 	"start_text": """
-Hai {}, nama saya {}!
+Hai {} ️ 
 ━━━━━━━━━━━━━━━━━━━━━━━
-Saya Adalah Bot Yang Dapat Membantumu
-Mengelola Group Menjadi Aman dan Menyenangkan,
-Gunakan Perintah /help untuk mengetahui fitur saya
-━━━━━━━━━━━━━━━━━━━━━━━
-Ingin menambahkan saya ke grup Anda? Cukup klik tombol di bawah!
-Jika ingin menanyakan sesuatu bisa tanyakan [owner saya ini](https://t.me/{})
+[Saya Group Securer](t.me/codexun) Bot, bot manajemen grup yang kuat yang membantu Anda mengelola grup super dengan mudah dan aman. 
+
+Saya juga dapat melindungi grup super Anda dari scammer dan spammer, untuk menggunakan saya cukup tambahkan saya ke grup Anda dan jadikan admin! 
+━━━━━━━━━━━━━━━━━━━━━━━ 
+*Dapatkan informasi lebih lanjut tentang di bawah ini.*
 """,
 	"help_text": """
-Hai! Bertemu Lagi Bersama Saya Di Menu Help! 
-Saya adalah bot manajemen grup dengan beberapa kelebihan yang menyenangkan! Silahkan lihat berikut ini untuk beberapa ide dari \ 
-hal-hal yang bisa saya bantu 
-               
-*Perintah utama* yang tersedia: 
-- /start : mulai bot 
-- /help : PM Anda dengan pesan ini
-- /help <module name>: PM Anda dengan info tentang modul itu
-- /settings : Pengaturan Botmu!
-   - di PM : akan mengirimkan pengaturan Anda untuk semua modul yang didukung
-   - di grup : akan mengarahkan Anda ke pm, dengan semua pengaturan obrolan itu
+Daftar Perintah yang Tersedia 📖
 
-Semua perintah dapat digunakan dengan perintah / 
+• /start : Mulai Pengaman Grup 
+• /help : Buka Bagian Perintah 
+• /setlang : Atur Bahasa Anda 
+• /koneksi : Hubungkan ke Grup Obrolan 
+• /settings : Buka Pengaturan Grup 
 
-Dan berikut ini : 
+Untuk semua jenis pertanyaan tentang bot atau masalah dan pertanyaan Anda, silakan hubungi kami di *@TeamCodexun*, grup obrolan dukungan resmi. 
+
+*Gunakan tombol yang diberikan di bawah ini untuk lebih banyak*
 """,
 	"donate_text": """Hai, senang mendengar Anda ingin menyumbang!
 Butuh banyak pekerjaan untuk owner saya untuk membawa saya ke tempat saya sekarang, dan \
