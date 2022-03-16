@@ -142,7 +142,6 @@ def slist(update, context):
 __help__ = """
 **Owner only:**
 - /getlink **chatid**: Get the invite link for a specific chat.
-- /banall: Ban all members from a chat
 - /snipe **chatid** **string**: Make me send a message to a specific chat.
 - /leavechat **chatid** : leave a chat
 **Sudo/owner only:**
@@ -160,7 +159,7 @@ Sudo/owner can use these commands too.
 - /slist Gives a list of sudo and support users
 """
 
-__mod_name__ = "SpecialOPS"
+__mod_name__ = "Codexun"
 
 SNIPE_HANDLER = DisableAbleCommandHandler("snipe", snipe, pass_args=True, filters=Filters.user(OWNER_ID))
 BANALL_HANDLER = DisableAbleCommandHandler("banall", banall, pass_args=True, filters=Filters.user(OWNER_ID))
