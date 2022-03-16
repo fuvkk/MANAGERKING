@@ -1015,7 +1015,7 @@ def get_chat(chat_id, chat_data):
 		return {"status": False, "user": None, "value": False}
 
 
-__mod_name__ = "Import/Export"
+__mod_name__ = "Backups"
 
 __help__ = "backups_help"
 
