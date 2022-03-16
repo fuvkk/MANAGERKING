@@ -33,25 +33,24 @@ Available commands are :
 	"start_text": """
 Hey {} 👋
 ━━━━━━━━━━━━━━━━━━━━━━━ ️ 
-[I'm Group Securer](t.me/codexun) Bot, the powerful group management bot which helps you to manage your super groups easily and safely.
+[I'm *Group Securer](t.me/codexun) Bot*, the powerful group management bot which helps you to manage your super groups easily and safely.
 
 I also can protect your super group from scammers and spammers, for using me just add me tou your group and make a admin!
 ━━━━━━━━━━━━━━━━━━━━━━━
-Get more information about below.
+*Get more information about below.*
 """,
 	"help_text": """
-*Main commands available :*
- - /start : cool command to check if the bot is alive or not
- - /help : PM's you this message
- - /help <module name>: PM's you info about that module
- - /setlang : change bot language
- - /settings : Settings Your Bot!
-   - in PM : will send you your settings for all supported modules
-   - in a group : will redirect you to pm, with all that chat's settings
+*Available Commands List 📖*
 
-All commands can either be used with /
+• /start : Start the bot
+• /help : Open help menu
+• /setlang : Set language
+• /connect : Connect Chat
+• /settings : Group stgns
 
-And Here :
+For any type of queries about to bot kindly konws us at *@TeamCodexun*, the official support chat group.
+
+*Use the given buttons for more*
 """,
 	"donate_text": """Hello, glad to hear you want to donate!
 Need a lot of work for my owner to take me to my place now, and \
