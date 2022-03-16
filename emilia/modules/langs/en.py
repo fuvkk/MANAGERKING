@@ -33,11 +33,11 @@ Available commands are :
 	"start_text": """
 Hey {} 👋
 ━━━━━━━━━━━━━━━━━━━━━━━ ️ 
-I'm Group Securer Bot, the powerful group management bot which helps you to manage your groups easily and safely.
+I'm **[Group Securer Bot](t.me/codexun)**, the powerful group management bot which helps you to manage your super groups easily and safely.
 
-I can protect your super group from scammers and spammers, just add me and make a admin!
+I also can protect your super group from scammers and spammers, for using me just add me tou your group and make a admin!
 ━━━━━━━━━━━━━━━━━━━━━━━
-Get more information about below.
+**Get more information about below.**
 """,
 	"help_text": """
 *Main commands available :*
