@@ -156,7 +156,7 @@ if is_module_loaded(FILENAME):
 
     __help__ = "logchannel_help"
 
-    __mod_name__ = "Log chnl"
+    __mod_name__ = "Log"
 
     LOG_HANDLER = CommandHandler("logchannel", logging)
     SET_LOG_HANDLER = CommandHandler("setlog", setlog)
