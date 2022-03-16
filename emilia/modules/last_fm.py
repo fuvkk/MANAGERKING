@@ -80,7 +80,7 @@ def last_fm(update, context):
     
 __help__ = "lastfm_help"
 
-__mod_name__ = "Last.FM"
+__mod_name__ = "LastFM"
     
 
 SET_USER_HANDLER = CommandHandler("setuser", set_user, pass_args=True)
