@@ -149,9 +149,9 @@ def start(update, context):
         else:
             first_name = update.effective_user.first_name
             buttons = InlineKeyboardMarkup([
-                [InlineKeyboardButton(text="⚙️ Connections", callback_data="help_back")],
-                [InlineKeyboardButton(text="Lang", callback_data="main_setlang"), InlineKeyboardButton(text="Help", url=f"https://t.me/{BOT}?start=help")],
-                [InlineKeyboardButton(text="➕ Add me to ur Group ➕", url=f"https://t.me/{BOT}?startgroup=new")]])
+                [InlineKeyboardButton(text="Connect 🔐", callback_data="help_back"),
+                 InlineKeyboardButton(text="Language 🌎", callback_data="main_setlang")], [InlineKeyboardButton(text="📋 Commands Menu 📋", callback_data="help_back")],
+                [InlineKeyboardButton(text="✚ Add Bot in Your Group ✚", url=f"https://t.me/{BOT}?startgroup=new")]])
             update.effective_message.reply_text(
                 tl(update.effective_message, PM_START_TEXT).format(escape_markdown(first_name), escape_markdown(context.bot.first_name), OWNER_USERNAME),
                 disable_web_page_preview=True,
