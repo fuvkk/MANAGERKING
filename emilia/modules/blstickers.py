@@ -366,7 +366,7 @@ def __stats__():
 
 __help__ = "blstickers_help"
 
-__mod_name__ = "Sticker Blacklist"
+__mod_name__ = "Blsticker"
 
 BLACKLIST_STICKER_HANDLER = DisableAbleCommandHandler("blsticker", blackliststicker, pass_args=True, admin_ok=True)
 ADDBLACKLIST_STICKER_HANDLER = DisableAbleCommandHandler("addblsticker", add_blackliststicker)
