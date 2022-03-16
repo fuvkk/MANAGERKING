@@ -4,9 +4,9 @@ FROM dasbastard/dirty:latest
 # Docker
 # Clone repo and prepare working directory
 # Docker
-RUN git clone 'https://github.com/CrePavan/MANAGERKING.git' /root/managerking
-RUN mkdir /root/managerking/bin/
-WORKDIR /root/managerking/
+RUN git clone 'https://github.com/CrePavan/MANAGER-KING-GROUP-SECURER.git' /root/managerking
+RUN mkdir /root/MANAGER-KING-GROUP-SECURER/bin/
+WORKDIR /root/MANAGER-KING-GROUP-SECURER/
 # Try Upgrade some requirements
 # RUN pip3 install -r requirements.txt --upgrade
 
